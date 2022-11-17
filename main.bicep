@@ -103,5 +103,5 @@ resource cosmos 'Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview' = {
   }
 }
 
-output authCallbackUrl string = 'User authorization callback URL: https://${functionApp.properties.defaultHostName}/api/ReceiveInstallation'
-output webhookUrl string = 'Webhook URL: https://${functionApp.properties.defaultHostName}/api/ProtectMaster'
+output postInstallationUrl string = 'https://${functionApp.properties.defaultHostName}/api/ReceiveInstallation'
+output webhookUrl string = 'https://${functionApp.properties.defaultHostName}/api/ProtectMaster'
