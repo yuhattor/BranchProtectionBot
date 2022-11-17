@@ -1,0 +1,11 @@
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-functions
+requests
+jsonschema
+cryptography == 38.0.3
+PyJWT == 1.7.1
+bcrypt == 4.0.1
+azure-cosmos >= 4.0.0
