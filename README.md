@@ -1,15 +1,24 @@
 # BranchProtectionBot - GitHub App
 
-BranchProtectionBot is a GitHub App that enables you to protect your default branch.
-To prevent commits from being lost due to accidental force pushes, you should protect your branch.
-However, it's very hard to apply protection rules every single time right after your organization member creates a repository. This bot automates the process to apply the rule and inform you about the protection rules applied to the repository.
+[![Test and Deploy BranchProtectionBot to Azure Function App](https://github.com/yuhattor/BranchProtectionBot/actions/workflows/main.yml/badge.svg)](https://github.com/yuhattor/BranchProtectionBot/actions/workflows/main.yml)
 
-It's very easy to use BranchProtectionBot. Please install the bot in your organization.
-Please Access **[HERE](https://github.com/apps/BranchProtectionBot)** to get the bot!
+<img src="./contents/bot.png" width="150px">
+
+**BranchProtectionBot** is a GitHub App that enables you to protect your default branch.
+
+To prevent commits from being lost due to accidental force pushes, you should protect your branch. However, it's very hard to apply protection rules every single time right after your organization member creates a repository. This bot automates the process to apply the rule and inform you about the protection rules applied to the repository.
+
+BranchProtectionBot is easy to deploy. Please visit **[HERE](https://github.com/apps/BranchProtectionBot)** to install the bot in your organization.
 
 ## How to use
 
-### Demo on YouTube
+There are three steps to protect your branch and manage your protection rules
+
+1. Installing the bot.
+2. A new branch created in the organization will be protected.
+3. You can edit the default rule settings for branch protection.
+
+![](./contents/installation.png)
 
 ---
 
@@ -17,13 +26,17 @@ Please Access **[HERE](https://github.com/apps/BranchProtectionBot)** to get the
 
 ### Process to protect master/main branch
 
+![](./contents/protection-diagram.png)
+
 1. When your organization member creates a new repository in the organization, BranchProtectionBot streams the repository's "created" event.
 2. Azure Functions trigger BranchProtectionBot API. (```POST: /api/ProtectMaster```)
-3. BranchProtectionBot API initiates the repository with README.md. The default branch is also created at the same time. 
+3. BranchProtectionBot API initiates the repository with README.md. The default branch is also created at the same time.
 4. BranchProtectionBot API protects the default branch. BranchProtectionBot supports both master and main as the default branch.
 5. BranchProtectionBot API creates an issue in the repository. It also mentions a specific user.
 
 ### Process to register application
+
+![](./contents/registration-diagram.png)
 
 1. When the bot is installed, registration callback api on Azure Functions is called. (```GET: /api/ReceiveInstallation```)
 2. The api registers organization and installation ID. After registration, the api provide a password to manage the servie setting.
