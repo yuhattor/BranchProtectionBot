@@ -11,13 +11,13 @@ from lib import cosmosdb_client
 
 # ---------------------------------------------------------
 # 
-#  This is a main function for master branch protection process
+#  This is a main function for main branch protection process
 # 
 # ---------------------------------------------------------
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
-    logging.info('ProtectMasterBot caught GitHub repository event.')
+    logging.info('BranchProtectionBot caught GitHub repository event.')
 
     # Get and set params from the request
     try: 

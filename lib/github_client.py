@@ -29,7 +29,7 @@ class GitHubClient:
                 json = {
                     "message": "Added README.md",
                     "committer": {
-                        "name": "Protect Master Bot",
+                        "name": "BranchProtectionBot",
                         "email": "protect@hattori.dev"
                     },
                     "content": base64.b64encode(text.encode('utf-8')).decode()
