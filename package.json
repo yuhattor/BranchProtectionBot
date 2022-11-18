@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "version": "",
+  "name": "Branch Protection Bot Azure Functions Worker",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc",
     "build:production": "npm run prestart && npm prune --production",
