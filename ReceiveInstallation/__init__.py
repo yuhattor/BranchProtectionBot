@@ -74,7 +74,7 @@ def main(req: func.HttpRequest, outdoc: func.Out[func.Document]) -> func.HttpRes
                             <h4>Password: { password }</h4>
                         </div>
                         <hr>
-                        <a href="/api/EditRule?org={gh_org}&password={password}"><div class="btn btn-primary"> Go To Setting </div></a> 
+                        <a href="/api/EditRule?org={ gh_org }&password={ password }"><div class="btn btn-primary"> Go To Setting </div></a> 
                     </div>
                 </center>
             <body></html>
