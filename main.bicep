@@ -103,5 +103,8 @@ resource cosmos 'Microsoft.DocumentDB/databaseAccounts@2020-06-01-preview' = {
   }
 }
 
+@description('Post installation URL for GitHub App')
 output postInstallationUrl string = 'https://${functionApp.properties.defaultHostName}/api/ReceiveInstallation'
+
+@description('Webhook URL for GitHub App')
 output webhookUrl string = 'https://${functionApp.properties.defaultHostName}/api/ProtectMaster'
