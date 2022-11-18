@@ -1,7 +1,9 @@
 name: Test and Deploy BranchProtectionBot to Azure Function App
 
 on:
-  [push]
+  push:
+    branches:
+      - main
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'   
