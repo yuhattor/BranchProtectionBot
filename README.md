@@ -151,3 +151,7 @@ After you have done the configuration, next you need to setup the GitHub App
 
 8. Your branch will be protected!
    ![](./contents/hands-on/result.png)
+
+## Licensing
+
+The GitHub App is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Please see LICENSE.txt in this repository for the full text of the license.

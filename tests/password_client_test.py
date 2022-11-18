@@ -1,11 +1,8 @@
 import os
 import sys
+import unittest
 sys.path.append(os.path.dirname(__file__) + '/../')
 from lib import password_client as password_client
-
-import unittest
-
-
 
 class PasswordClientTestCase(unittest.TestCase):
     def test_generate_password_returns_dict_object(self):

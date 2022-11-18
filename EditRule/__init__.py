@@ -34,7 +34,6 @@ def main(req: func.HttpRequest, indoc: func.DocumentList) -> func.HttpResponse:
     
     # Read rules and schema file
     with open("config/protection_rules.json") as rule_file:
-        # branch_protection_default_rules = json.load(rule_file)
         branch_protection_default_rules = rule_file.read()
 
     # Read and check user rules
@@ -68,11 +67,11 @@ def main(req: func.HttpRequest, indoc: func.DocumentList) -> func.HttpResponse:
                                 <hr>
                                 <div class="form-group">
                                     <label>Protection Rule</label>
-                                    <textarea class="form-control" name="rules" id="rule" rows="30">{ protection_rules}</textarea>
+                                    <textarea class="form-control" name="rules" id="rule" rows="30">{ protection_rules }</textarea>
                                 </div>
 
-                                <input type="hidden" id="org" name="org" value="{org}">
-                                <input type="hidden" id="password" name="password" value="{password}">
+                                <input type="hidden" id="org" name="org" value="{ org }">
+                                <input type="hidden" id="password" name="password" value="{ password }">
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
